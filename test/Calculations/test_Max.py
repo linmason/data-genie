@@ -23,8 +23,8 @@ def test_max():
         10,
         9.14,
         13,
-        -1,
+        0,
         1.2,
-        -1
+        0
     ]
     assert c.do(test_data) == expected_result

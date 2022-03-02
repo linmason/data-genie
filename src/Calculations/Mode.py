@@ -13,7 +13,7 @@ class Mode(Calculation.Calculation):
             if rc == []:
                 result.append(0)
             else:
-                result.append(numpy.ptp(rc))
+                result.append(stats.mode(rc))
         return result
 
 
