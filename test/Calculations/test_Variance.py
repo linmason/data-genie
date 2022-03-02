@@ -11,7 +11,7 @@ def test_get_calculation():
 
 def test_variance():
     """
-    Test functionality of the Average class
+    Test functionality of the Variance class
     """
     c = Variance()
     test_data = [
@@ -22,7 +22,7 @@ def test_variance():
         [11, 13, 'twelve'],
         []
     ]
-    expected_result = [     # these are population var, not sample var. might be wrong depending on how numpy does var
+    expected_result = [     # these are population var, not sample var
         8,
         7.891136,
         1296.5833,

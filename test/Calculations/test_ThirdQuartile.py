@@ -11,7 +11,7 @@ def test_get_calculation():
 
 def test_third_quartile():
     """
-    Test functionality of the Average class
+    Test functionality of the ThirdQuartile class
     """
     c = ThirdQuartile()
     test_data = [

@@ -14,7 +14,7 @@ class Variance(Calculation.Calculation):
                 result.append(numpy.var(rc))
             else:
                 result.append(0)
-        return result
+        return result       # these are population var, not sample var
 
 
 def get_calculation():

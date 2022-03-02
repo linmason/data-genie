@@ -11,7 +11,7 @@ def test_get_calculation():
 
 def test_median():
     """
-    Test functionality of the Average class
+    Test functionality of the Median class
     """
     c = Median()
     test_data = [

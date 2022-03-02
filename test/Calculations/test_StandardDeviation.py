@@ -11,7 +11,7 @@ def test_get_calculation():
 
 def test_standard_deviation():
     """
-    Test functionality of the Average class
+    Test functionality of the StandardDeviation class
     """
     c = StandardDeviation()
     test_data = [
@@ -22,7 +22,7 @@ def test_standard_deviation():
         [11, 13, 'twelve'],
         []
     ]
-    expected_result = [     # these are population std, not sample std. might be wrong depending on how numpy does std
+    expected_result = [     # these are population std, not sample std
         2.8284271,
         2.8091166,
         36.008101,

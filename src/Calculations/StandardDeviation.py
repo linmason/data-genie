@@ -13,7 +13,7 @@ class StandardDeviation(Calculation.Calculation):
                 result.append(numpy.std(rc))
             else:
                 result.append(0)
-        return result
+        return result       # these are population std, not sample std
 
 
 def get_calculation():
