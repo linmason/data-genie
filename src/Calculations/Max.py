@@ -1,9 +1,9 @@
 from src.Calculations import Calculation
 import numpy
 
-class Range(Calculation.Calculation):
+class Max(Calculation.Calculation):
     def __init__(self):
-        super().__init__("Range", vertical=True, horizontal=True)
+        super().__init__("Max", vertical=True, horizontal=True)
 
     def do(self, data: [list]) -> list:
         filtered_data = self.filter_out(data, str)
@@ -17,4 +17,4 @@ class Range(Calculation.Calculation):
 
 
 def get_calculation():
-    return Range
+    return Max

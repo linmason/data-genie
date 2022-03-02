@@ -1,16 +1,16 @@
-from src.Calculations.Count import Count, get_calculation
+from src.Calculations.Min import Min, get_calculation
 
 def test_get_calculation():
     '''
     Make sure the get_calculation function returns the calculation
     '''
-    assert get_calculation() == Count
+    assert get_calculation() == Min
 
-def test_sum():
+def test_min():
     '''
     Test functionality of the Sum class
     '''
-    c = Count()
+    c = Min()
     test_data = [
         [2, 4, 6, 8, 10],
         [1, 9.14, 5, 7, 9],

@@ -6,7 +6,7 @@ def test_get_calculation():
     '''
     assert get_calculation() == Count
 
-def test_sum():
+def test_count():
     '''
     Test functionality of the Sum class
     '''
