@@ -1,5 +1,5 @@
 import csv
-from src import parser
+from src.parser import CsvParser
 
 input_file = "data/test_sheet_0.csv"
 
@@ -33,11 +33,20 @@ def get_vertical_calculations():
             active_calculations.append(c)
     return active_calculations
 
+def get_twocol_calculations():
+    active_calculations = []
+    for calculation in get_all_calculations():
+        c = calculation()
+        if c.is_twocol_calculation:
+            active_calculations.append(c)
+    return active_calculations
+
 
 def main(input_file):
     '''
     Parse input file to rows and cols
     '''
+    parser = CsvParser()
     rows, cols = parser.read_csv(input_file)
 
     '''
@@ -61,6 +70,17 @@ def main(input_file):
     for calculation in active_calculations:
         result_row = calculation.do(cols)
         new_rows.append([calculation.name] + result_row)
+
+    '''
+    Perform two-column calculations
+    '''
+    active_calculations = get_twocol_calculations()
+
+    # do each calculation and add it to list of rows
+    for calculation in active_calculations:
+        result_cols = calculation.do(cols)
+        for new_col in result_cols:
+            new_cols.append(new_col)
 
 
     ''' Add new rows to list of rows, new cols to list of cols'''
