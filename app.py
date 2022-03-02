@@ -8,6 +8,8 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 app.config['DOWNLOAD_FOLDER'] = 'downloads'
 
+download_file_name = "data_genie_output.csv"
+
 @app.route('/')
 def home():
     return render_template('home.html')
