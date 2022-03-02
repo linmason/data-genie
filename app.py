@@ -1,7 +1,3 @@
-from cgitb import html
-from crypt import methods
-import re
-from webbrowser import get
 from flask import Flask, current_app, render_template, request, redirect, send_from_directory, url_for, flash, send_file
 from werkzeug.utils import secure_filename
 from src import manager
