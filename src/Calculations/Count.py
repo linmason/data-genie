@@ -8,7 +8,7 @@ class Count(Calculation.Calculation):
     def do(self, data: [list]) -> list:
         result = []
         for rc in data:
-            result.append(rc.size)
+            result.append(len(rc))
         return result
 
 
