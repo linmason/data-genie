@@ -22,7 +22,7 @@ def test_count():
     expected_result = [
         5,
         5,
-        5,
+        3,
         2,
         2,
         0
