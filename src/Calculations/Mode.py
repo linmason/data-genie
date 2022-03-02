@@ -11,7 +11,7 @@ class Mode(Calculation.Calculation):
         result = []
         for rc in filtered_data:
             if rc == []:
-                result.append(-1)
+                result.append(0)
             else:
                 result.append(numpy.ptp(rc))
         return result
