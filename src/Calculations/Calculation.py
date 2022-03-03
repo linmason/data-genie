@@ -35,7 +35,7 @@ class Calculation:
         pass
 
     '''Below are helper functions for children classes (don't re-implement them)'''
-    def filter(self, data: [list], dtype: list):
+    def filter(self, data: [list], dtype: [type] or type):
         '''
         Filters data to only include values of type dtype and returns the new result
         '''
@@ -46,7 +46,7 @@ class Calculation:
             new_data.append([cell for cell in data[i] if type(cell) in dtype])
         return new_data
 
-    def filter_out(self, data: [list], dtype: list):
+    def filter_out(self, data: [list], dtype: [type] or type):
         '''
         Filters out any dtype values out of data and returns it
         '''
