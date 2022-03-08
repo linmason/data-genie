@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #80C1FF;
+}
+
+.center {
+    text-align: center;
+}
+
+#web-head {
+    padding: 80px;
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    font-family: Luminari, fantasy;
+}
+
+.result {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+#footer {
+    padding-left: 1180px;
+    padding-top: 254px;
+}

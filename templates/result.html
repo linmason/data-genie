@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='styles/result.css')}}">
+        <title>Document2</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="web-head">DataGenie</h1>
+        </header>
+
+        <main>
+            <div class="result">
+                <h2>Click below to download the generated file.</h2>
+                <a href="{{ url_for('download', filename='data_genie_output.csv') }}"><button id = "bttn">Download</button></a>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <small>Copyright &copy; 2022, Northwestern University</small>
+        </footer>
+
+
+    </body>
+
+
+
+</html>

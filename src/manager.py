@@ -1,7 +1,12 @@
-import csv
 from src.parser import CsvParser
+import os
 
-input_file = "data/test_sheet_0.csv"
+# if you change this variable name, also change the identical string
+# in /templates/result.html
+output_file = "data_genie_output.csv"
+## TODO: this should only be defined once, but is also defined in app.py
+input_folder = "uploads"
+output_folder = "downloads"
 
 def get_all_calculations():
     # dynamically fetches all calculations from Calculations dir
@@ -104,12 +109,9 @@ def main(input_file):
     '''
     Write data to new csv file
     '''
-    out_file = input_file.split("/")
-    out_file[-1] = "data_genie_"+out_file[-1]
-    out_file = '/'.join(out_file)
-    parser.write_csv(out_file, rows)
+    parser.write_csv(os.path.join(output_folder, output_file), rows)
 
 
 if __name__ == '__main__':
-    # for testing
-    main(input_file)
+    print("Currently this file cannot be run on its own")
+    print("Start the website using flask and use the GUI")

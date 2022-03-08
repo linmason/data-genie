@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{url_for('static',filename='styles/home.css')}}">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="web-head">DataGenie</h1>
+        </header>
+
+        <main>
+            <article id="home-body">
+                <h2>Welcome!</h2>
+                <p>Click "Get Started" to upload a document and choose an output option.</p>
+            </article>
+
+            <div class = "center whole-bttn">
+                <a href="{{url_for('index')}}"><button id = "bttn">Get Started</button></a>
+            </div>
+
+        </main>
+
+        <footer id="footer">
+            <small>Copyright &copy; 2022, Northwestern University</small>
+        </footer>
+    </body>
+</html>
