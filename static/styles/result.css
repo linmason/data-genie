@@ -17,6 +17,25 @@
     font-family: Luminari, fantasy;
 }
 
+#bttn {
+    padding: 16px 50px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    transition-duration: 0.2s;
+    border: 2px solid white;
+}
+
+#bttn:hover {
+    background-color: white;
+    color: #80C1FF;
+}
+
+.whole-bttn {
+    padding: 20px;
+}
+
 .result {
     padding: 120px;
     font-size: 20px;
