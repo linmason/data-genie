@@ -29,7 +29,7 @@ def upload():
         except FileNotFoundError:
             pass
         # call to backend; this function will place the output file in the downloads folder
-        manager.main(secure_file)
+        manager.main(os.path.join(app.config['UPLOAD_FOLDER'], secure_file))
         # remove file from uploads folder
         os.remove(os.path.join(app.config['UPLOAD_FOLDER'], secure_file))
         return redirect(url_for('result'))
