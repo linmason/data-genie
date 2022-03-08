@@ -1,13 +1,13 @@
-from src.Calculations import Calculation
+from src.Calculations.Calculation import Calculation, number
 import numpy
 
 
-class Variance(Calculation.Calculation):
+class Variance(Calculation):
     def __init__(self):
         super().__init__("Variance", vertical=True, horizontal=True)
 
     def do(self, data: [list]) -> list:
-        filtered_data = self.filter_out(data, str)
+        filtered_data = self.filter(data, number)
         result = []
         for rc in filtered_data:
             if len(rc) > 0:
