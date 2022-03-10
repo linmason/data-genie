@@ -8,7 +8,7 @@ def test_get_calculation():
 
 def test_max():
     '''
-    Test functionality of the Sum class
+    Test functionality of the Max class
     '''
     c = Max()
     test_data = [

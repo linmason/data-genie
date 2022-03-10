@@ -8,7 +8,7 @@ def test_get_calculation():
 
 def test_min():
     '''
-    Test functionality of the Sum class
+    Test functionality of the Min class
     '''
     c = Min()
     test_data = [

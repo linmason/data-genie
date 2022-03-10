@@ -8,7 +8,7 @@ def test_get_calculation():
 
 def test_range():
     '''
-    Test functionality of the Sum class
+    Test functionality of the Range class
     '''
     c = Range()
     test_data = [

@@ -8,7 +8,7 @@ def test_get_calculation():
 
 def test_count():
     '''
-    Test functionality of the Sum class
+    Test functionality of the Count class
     '''
     c = Count()
     test_data = [

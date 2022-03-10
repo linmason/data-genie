@@ -8,7 +8,7 @@ def test_get_calculation():
 
 def test_mode():
     '''
-    Test functionality of the Sum class
+    Test functionality of the Mode class
     '''
     c = Mode()
     test_data = [
