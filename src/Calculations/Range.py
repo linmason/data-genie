@@ -1,12 +1,12 @@
-from src.Calculations import Calculation
+from src.Calculations.Calculation import Calculation, number
 import numpy
 
-class Range(Calculation.Calculation):
+class Range(Calculation):
     def __init__(self):
         super().__init__("Range", vertical=True, horizontal=True)
 
     def do(self, data: [list]) -> list:
-        filtered_data = self.filter_out(data, str)
+        filtered_data = self.filter(data, number)
         result = []
         for rc in filtered_data:
             if rc == []:

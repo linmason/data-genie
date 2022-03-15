@@ -1,19 +1,22 @@
-from src.Calculations import Calculation
-import numpy
+from src.Calculations.Calculation import Calculation, number
 import stats
 
-class Mode(Calculation.Calculation):
+class Mode(Calculation):
     def __init__(self):
         super().__init__("Mode", vertical=True, horizontal=True)
 
     def do(self, data: [list]) -> list:
-        filtered_data = self.filter_out(data, str)
+        filtered_data = self.filter(data, number)
         result = []
         for rc in filtered_data:
             if rc == []:
                 result.append(0)
             else:
-                result.append(stats.mode(rc))
+                try:
+                    result.append(stats.mode(rc))
+                except stats.StatsError:
+                    # no distinct mode
+                    result.append(0)
         return result
 
 
