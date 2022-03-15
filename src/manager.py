@@ -112,6 +112,5 @@ def main(input_file):
 
 
 if __name__ == '__main__':
-    main("/Users/josh/Downloads/test_sheet.csv")
     print("Currently this file cannot be run on its own")
     print("Start the website using flask and use the GUI")
