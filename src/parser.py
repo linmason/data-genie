@@ -35,7 +35,7 @@ class CsvParser:
             reader = csv.reader(f)
             first_row = True
             for r, row in enumerate(reader):
-                new_row = ['']
+                new_row = []
                 for i, col_item in enumerate(row):
                     item = process_data_type(col_item)
                     # if item is date, store raw info
@@ -52,12 +52,12 @@ class CsvParser:
                 first_row = False
         return rows, cols
 
-    def write_csv(self, file_name, rows):
+    def write_csv(self, file_name, rows, summary=False):
         # fix dates
-        for i_row in self.dates:
-            for (i, raw_str) in self.dates[i_row]:
-                i += 1   # offset to account for added "row header" column
-                rows[i_row][i] = raw_str
+        if not summary:  # only on enhanced sheet
+            for i_row in self.dates:
+                for (i, raw_str) in self.dates[i_row]:
+                    rows[i_row][i] = raw_str
         # write to output file
         with open(file_name, "w") as f:
             writer = csv.writer(f)

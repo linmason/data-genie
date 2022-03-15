@@ -22,7 +22,43 @@
     text-align: center;
 }
 
+/* https://www.w3schools.com/howto/howto_css_loader.asp
+.loader {
+    border: 10px solid white;
+    border-top: 10px solid #3C68D0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 680px;
+    top: 480px; /* 430px 
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+*/
 #footer {
     padding-left: 1180px;
     padding-top: 254px;
+}
+
+#bttn {
+    padding: 16px 50px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    transition-duration: 0.2s;
+    border: 2px solid white;
+}
+
+#bttn:hover {
+    background-color: white;
+    color: #80C1FF;
 }

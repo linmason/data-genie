@@ -3,7 +3,8 @@ import os
 
 # if you change this variable name, also change the identical string
 # in /templates/result.html
-output_file = "data_genie_output.csv"
+enhanced_output_file = "data_genie_enhanced.csv"
+summary_output_file = "data_genie_summarized.csv"
 ## TODO: this should only be defined once, but is also defined in app.py
 input_folder = "uploads"
 output_folder = "downloads"
@@ -58,7 +59,7 @@ def main(input_file):
     Perform horizontal calculations
     '''
     active_calculations = get_horizontal_calculations()
-    new_cols = [[]]
+    new_cols = []
 
     # do each calculation and add it to list of new cols
     for calculation in active_calculations:
@@ -69,7 +70,7 @@ def main(input_file):
     Perform vertical calculations
     '''
     active_calculations = get_vertical_calculations()
-    new_rows = []
+    new_rows = [[''] + rows[0]]
 
     # do each calculation and add it to list of rows
     for calculation in active_calculations:
@@ -88,20 +89,17 @@ def main(input_file):
             new_cols.append(new_col)
 
 
-    ''' Add new rows to list of rows, new cols to list of cols'''
-    for new_row in new_rows:
-        rows.append(new_row)
-
+    ''' Add new cols to list of cols'''
     for new_col in new_cols:
         cols.append(new_col)
 
 
     '''
-    Add new column data to rows
+    Add new column data to rows on existing spreadsheet
     '''
     if len(cols) > len(rows[0]):
         for i,row in enumerate(rows):
-            for j in range(len(row), len(cols) + 1):
+            for j in range(len(row) + 1, len(cols) + 1):
                 if i < len(cols[j-1]):
                     row.append(cols[j-1][i])
 
@@ -109,7 +107,8 @@ def main(input_file):
     '''
     Write data to new csv file
     '''
-    parser.write_csv(os.path.join(output_folder, output_file), rows)
+    parser.write_csv(os.path.join(output_folder, enhanced_output_file), rows)
+    parser.write_csv(os.path.join(output_folder, summary_output_file), new_rows, summary=True)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block title %}Error{% endblock %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <li>Error: {{message}}</li>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+{% endblock %}

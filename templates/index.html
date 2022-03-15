@@ -15,18 +15,20 @@
 
         <main>
             <div class="result">
-                <!--From w3schools.com-->
+                <!--From w3schools.com and https://flask.palletsprojects.com/en/2.0.x/patterns/flashing/-->
                 <p>Upload a file to perform data enhancements on: </p>
                 <br>
+
                 <form action="/upload" method= "POST" enctype="multipart/form-data">
                     <input type="file" name="uploadname" accept=".csv">
                     <br><br>
                 
-                    <input type="submit" value="Submit">
-                    
-                    
+                    <input id = "bttn" type="submit" value="Submit">
+        
                 </form>
             </div>
+        
+           <!-- <div class="loader"></div> -->
 
         </main>
 
