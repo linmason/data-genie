@@ -13,7 +13,7 @@ class Variance(Calculation):
             if len(rc) > 0:
                 result.append(numpy.var(rc))
             else:
-                result.append(0)
+                result.append('')
         return result       # these are population var, not sample var
 
 

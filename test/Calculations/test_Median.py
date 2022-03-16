@@ -28,6 +28,6 @@ def test_median():
         3,
         3.5,
         12,
-        0
+        ''
     ]
     assert c.do(test_data) == approx(expected_result)

@@ -23,8 +23,8 @@ def test_mode():
         8,
         9.14,
         13,
-        0,
+        '',
         1,
-        0
+        ''
     ]
     assert c.do(test_data) == expected_result

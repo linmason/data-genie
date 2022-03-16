@@ -22,6 +22,6 @@ def test_average():
         6,
         5.028,
         12,
-        0
+        ''
     ]
     assert c.do(test_data) == approx(expected_result)

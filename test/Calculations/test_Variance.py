@@ -28,6 +28,6 @@ def test_variance():
         1296.5833,
         7.5,
         1,
-        0
+        ''
     ]
     assert c.do(test_data) == approx(expected_result)

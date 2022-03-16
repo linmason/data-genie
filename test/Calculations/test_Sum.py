@@ -21,6 +21,6 @@ def test_sum():
         30,
         25.14,
         24,
-        0
+        ''
     ]
     assert c.do(test_data) == expected_result

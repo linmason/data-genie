@@ -9,7 +9,10 @@ class Sum(Calculation):
         filtered_data = self.filter(data, number)
         result = []
         for rc in filtered_data:
-            result.append(numpy.sum(rc))
+            if rc != []:
+                result.append(numpy.sum(rc))
+            else:
+                result.append('')
         return result
 
 

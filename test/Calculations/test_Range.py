@@ -23,8 +23,8 @@ def test_range():
         8,
         8.14,
         2,
+        '',
         0,
-        0,
-        0
+        ''
     ]
     assert c.do(test_data) == expected_result

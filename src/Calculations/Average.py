@@ -15,7 +15,7 @@ class Average(Calculation):
             if len(rc) > 0:
                 result.append(numpy.average(rc))
             else:
-                result.append(0)
+                result.append('')
         return result
 
 

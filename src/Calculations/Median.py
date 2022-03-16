@@ -13,7 +13,7 @@ class Median(Calculation):
             if len(rc) > 0:
                 result.append(numpy.median(rc))
             else:
-                result.append(0)
+                result.append('')
         return result
 
 

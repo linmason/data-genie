@@ -13,7 +13,7 @@ class FirstQuartile(Calculation):
             if len(rc) > 0:
                 result.append(numpy.quantile(rc, 0.25))
             else:
-                result.append(0)
+                result.append('')
         return result
 
 

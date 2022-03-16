@@ -28,6 +28,6 @@ def test_third_quartile():
         4.5,
         5.75,
         12.5,
-        0
+        ''
     ]
     assert c.do(test_data) == approx(expected_result)

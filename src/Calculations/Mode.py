@@ -10,13 +10,13 @@ class Mode(Calculation):
         result = []
         for rc in filtered_data:
             if rc == []:
-                result.append(0)
+                result.append('')
             else:
                 try:
                     result.append(stats.mode(rc))
                 except stats.StatsError:
                     # no distinct mode
-                    result.append(0)
+                    result.append('')
         return result
 
 

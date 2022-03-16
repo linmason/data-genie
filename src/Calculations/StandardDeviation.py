@@ -12,7 +12,7 @@ class StandardDeviation(Calculation):
             if len(rc) > 0:
                 result.append(numpy.std(rc))
             else:
-                result.append(0)
+                result.append('')
         return result       # these are population std, not sample std
 
 

@@ -28,6 +28,6 @@ def test_standard_deviation():
         36.008101,
         2.7386128,
         1,
-        0
+        ''
     ]
     assert c.do(test_data) == approx(expected_result)

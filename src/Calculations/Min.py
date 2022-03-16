@@ -10,7 +10,7 @@ class Min(Calculation):
         result = []
         for rc in filtered_data:
             if rc == []:
-                result.append(0)
+                result.append('')
             else:
                 result.append(numpy.min(rc))
         return result

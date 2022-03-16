@@ -23,8 +23,8 @@ def test_min():
         2,
         1,
         11,
-        0,
+        '',
         1,
-        0
+        ''
     ]
     assert c.do(test_data) == expected_result
